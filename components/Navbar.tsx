@@ -64,9 +64,13 @@ export default function Navbar() {
                             </Link>
                         ))}
                         <Button
-                            variant={scrolled ? "default" : "secondary"}
+                            variant="default"
                             size="sm"
-                            className={cn(!scrolled && "bg-white text-primary-600 hover:bg-gray-100")}
+                            className={cn(
+                                scrolled
+                                    ? "bg-primary-600 text-white"
+                                    : "bg-white text-primary-600 hover:bg-gray-100"
+                            )}
                         >
                             Portal Login
                         </Button>

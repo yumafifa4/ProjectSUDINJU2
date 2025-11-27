@@ -1,21 +1,13 @@
 import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
-
-// Since I don't have radix-ui/react-slot installed, I will implement a simpler version or just use standard props.
-// Actually, I didn't add class-variance-authority to package.json. I should stick to simpler implementation or add it.
-// I'll use a simpler implementation without cva/radix for now to minimize dependencies if I can't install them.
-// But wait, I added clsx and tailwind-merge. I can do conditional classes easily.
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: 'default' | 'outline' | 'ghost' | 'link';
     size?: 'default' | 'sm' | 'lg' | 'icon';
-    asChild?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-    ({ className, variant = 'default', size = 'default', asChild = false, ...props }, ref) => {
+    ({ className, variant = 'default', size = 'default', ...props }, ref) => {
         const Comp = "button"
 
         const variants = {
