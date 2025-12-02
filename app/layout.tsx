@@ -27,6 +27,9 @@ export const metadata: Metadata = {
         locale: "id_ID",
         type: "website",
     },
+    icons: {
+        icon: "/images/logo-jaya-raya.svg",
+    },
 };
 
 export default function RootLayout({

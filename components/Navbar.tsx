@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button";
 const navItems = [
     { name: "Home", href: "#home" },
     { name: "Profile", href: "#profile" },
+    { name: "Statistik", href: "#statistik" },
+    { name: "Layanan", href: "#layanan" },
     { name: "Visi & Misi", href: "#visi-misi" },
     { name: "Gallery", href: "#gallery" },
     { name: "Kegiatan", href: "#kegiatan" },
@@ -38,10 +40,19 @@ export default function Navbar() {
         >
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-2">
-                        {/* Placeholder for Logo */}
-                        <div className="h-10 w-10 rounded-full bg-primary-600 flex items-center justify-center text-white font-bold">
-                            SD
+                    <Link href="/" className="flex items-center gap-3">
+                        {/* Jaya Raya Logo */}
+                        <div className="flex flex-col items-center">
+                            <div className="relative h-10 w-8 overflow-hidden">
+                                <img
+                                    src="/images/logo-jaya-raya.svg"
+                                    alt="Logo Jaya Raya"
+                                    className="object-contain w-full h-full"
+                                />
+                            </div>
+                            <span className={cn("text-[0.6rem] font-bold tracking-wider mt-0.5", scrolled ? "text-gray-900" : "text-white")}>
+                                JAYA RAYA
+                            </span>
                         </div>
                         <div className={cn("flex flex-col", scrolled ? "text-gray-900" : "text-white")}>
                             <span className="text-sm font-bold leading-none">Suku Dinas Pendidikan</span>
@@ -50,13 +61,13 @@ export default function Navbar() {
                     </Link>
 
                     {/* Desktop Nav */}
-                    <div className="hidden md:flex items-center gap-6">
+                    <div className="hidden lg:flex items-center gap-6">
                         {navItems.map((item) => (
                             <Link
                                 key={item.name}
                                 href={item.href}
                                 className={cn(
-                                    "text-sm font-medium transition-colors hover:text-primary-500",
+                                    "text-sm font-medium transition-colors hover:text-accent-orange",
                                     scrolled ? "text-gray-700" : "text-white/90"
                                 )}
                             >
@@ -64,13 +75,9 @@ export default function Navbar() {
                             </Link>
                         ))}
                         <Button
-                            variant="default"
+                            variant={scrolled ? "default" : "secondary"}
                             size="sm"
-                            className={cn(
-                                scrolled
-                                    ? "bg-primary-600 text-white"
-                                    : "bg-white text-primary-600 hover:bg-gray-100"
-                            )}
+                            className={cn(!scrolled && "bg-white text-primary-600 hover:bg-gray-100")}
                         >
                             Portal Login
                         </Button>
@@ -78,7 +85,7 @@ export default function Navbar() {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden p-2"
+                        className="lg:hidden p-2"
                         onClick={() => setIsOpen(!isOpen)}
                         aria-label="Toggle menu"
                     >
@@ -93,7 +100,7 @@ export default function Navbar() {
 
             {/* Mobile Nav */}
             {isOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t animate-fade-in">
+                <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t animate-fade-in">
                     <div className="flex flex-col p-4 gap-4">
                         {navItems.map((item) => (
                             <Link

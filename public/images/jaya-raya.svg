@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240">
+  <!-- Shield Background -->
+  <path d="M20,20 L180,20 L180,160 Q100,240 20,160 Z" fill="#FFA500" stroke="#000" stroke-width="4"/>
+  
+  <!-- Inner Shield -->
+  <path d="M30,30 L170,30 L170,150 Q100,220 30,150 Z" fill="#FFF" stroke="#000" stroke-width="2"/>
+  
+  <!-- Monas Symbol (Simplified) -->
+  <rect x="90" y="50" width="20" height="100" fill="#000"/>
+  <polygon points="90,50 100,30 110,50" fill="#FFD700"/>
+  <rect x="80" y="140" width="40" height="10" fill="#000"/>
+  
+  <!-- Text -->
+  <text x="100" y="180" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#000">JAYA RAYA</text>
+</svg>

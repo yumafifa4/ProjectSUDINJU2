@@ -7,9 +7,18 @@ export default function Footer() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div className="space-y-4">
-                        <div className="flex items-center gap-2">
-                            <div className="h-8 w-8 rounded-full bg-primary-500 flex items-center justify-center text-white font-bold">
-                                SD
+                        <div className="flex items-center gap-3">
+                            <div className="flex flex-col items-center">
+                                <div className="relative h-10 w-8 overflow-hidden">
+                                    <img
+                                        src="/images/logo-jaya-raya.svg"
+                                        alt="Logo Jaya Raya"
+                                        className="object-contain w-full h-full"
+                                    />
+                                </div>
+                                <span className="text-[0.6rem] font-bold tracking-wider mt-0.5 text-white">
+                                    JAYA RAYA
+                                </span>
                             </div>
                             <span className="text-lg font-bold text-white">Sudin Pendidikan II Jakut</span>
                         </div>

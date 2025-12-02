@@ -14,8 +14,8 @@ const galleryImages = [
     },
     {
         id: 2,
-        src: "https://images.unsplash.com/photo-1577896334614-501cf115fe47?q=80&w=2070&auto=format&fit=crop",
-        alt: "Upacara Bendera",
+        src: "https://images.unsplash.com/photo-1565034946487-077786996e27?q=80&w=2070&auto=format&fit=crop",
+        alt: "Upacara Bendera ASN",
         category: "Kegiatan"
     },
     {
@@ -38,7 +38,7 @@ const galleryImages = [
     },
     {
         id: 6,
-        src: "https://images.unsplash.com/photo-1427504746696-ea5abd71a32f?q=80&w=2070&auto=format&fit=crop",
+        src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=2070&auto=format&fit=crop",
         alt: "Kunjungan Kerja",
         category: "Kunjungan"
     }

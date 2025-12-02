@@ -1,3 +1,9 @@
 {
-  "/page": "app/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/kegiatan/page": "app/kegiatan/page.js",
+  "/page": "app/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/visi-misi/page": "app/visi-misi/page.js"
 }
